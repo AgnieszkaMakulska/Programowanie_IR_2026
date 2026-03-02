@@ -7,7 +7,7 @@ c = float(input("c = "))
 
 delta = b**2 - 4*a*c
 
-if delta < 1e-20:
+if math.isclose(delta, 0, abs_tol=1e-20):
     x0 = -b / (2*a)
     print("x0 = {0:.2f}".format(x0))
 elif delta > 0:
